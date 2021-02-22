@@ -72,3 +72,7 @@ variable "worker_disk_size" {
 variable "lb_address_pool_id" {
   type = "string"
 }
+
+variable "admin_username" {
+  type = "string"
+}
