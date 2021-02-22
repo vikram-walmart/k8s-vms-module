@@ -40,15 +40,6 @@ variable "ssh_public_key" {
   type = "string"
 }
 
-variable "admin_username" {
-  type = "string"
-}
-
-
-variable "admin_password" {
-  type = "string"
-}
-
 variable "password_flag" {
   type = "string"
 }
