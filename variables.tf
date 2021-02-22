@@ -76,3 +76,8 @@ variable "lb_address_pool_id" {
 variable "admin_username" {
   type = "string"
 }
+
+
+variable "admin_password" {
+  type = "string"
+}
