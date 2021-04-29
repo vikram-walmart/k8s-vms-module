@@ -25,3 +25,9 @@ data "azurerm_image" "bastion" {
   name                = "${var.bastion_image_name}"
   resource_group_name = "${var.images_resource_group}"
 }
+
+resource "random_password" "vms" {
+  length           = 16
+  special          = true
+  override_special = "_%@"
+}
