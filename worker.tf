@@ -59,7 +59,7 @@ resource "azurerm_virtual_machine" "worker" {
   os_profile {
     computer_name  = "${var.cluster_name}-${var.environment}-${var.name_suffix}-${format("worker%d", count.index + 1)}"
     admin_username = "${var.admin_username}"
-    admin_password = random_password.vms.result
+    admin_password =  ${random_password.vms.result}
     
   }
 
