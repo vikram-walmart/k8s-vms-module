@@ -44,7 +44,7 @@ resource "azurerm_virtual_machine" "bastion" {
   location                         = "${data.azurerm_resource_group.main.location}"
   resource_group_name              = "${data.azurerm_resource_group.main.name}"
   network_interface_ids            = ["${azurerm_network_interface.bastion.id}"]
-  vm_size                          = "Standard_DS1_v2"
+  vm_size                          = "Standard_DS2_v2"
   delete_os_disk_on_termination    = true
   delete_data_disks_on_termination = true
 
@@ -62,7 +62,7 @@ resource "azurerm_virtual_machine" "bastion" {
   os_profile {
     computer_name  = "${var.cluster_name}-${var.environment}-bastion"
     admin_username = "${var.admin_username}"
-    
+    admin_password = random_password.vms.result
   }
 
   os_profile_linux_config {

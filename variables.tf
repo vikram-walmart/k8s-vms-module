@@ -76,3 +76,14 @@ variable "lb_address_pool_id" {
 variable "admin_username" {
   type = "string"
 }
+
+
+variable "worker_vm_size" {
+  type    = string
+  default = "Standard_F16s_v2"
+}
+
+variable "manager_vm_size" {
+  type    = string
+  default = "Standard_DS3_v2"
+}
