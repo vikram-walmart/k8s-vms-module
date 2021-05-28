@@ -80,7 +80,7 @@ variable "admin_username" {
 
 variable "worker_vm_size" {
   type    = string
-  default = "Standard_F16s_v2"
+  default = "Standard_DS5_v2"
 }
 
 variable "manager_vm_size" {
